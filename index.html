@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Property Transaction Checklist</title>
+<meta name="description" content="A checklist for the sale of a property in Bogotá — value, documents, taxes, agencies and contract.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23e5e4e0'/%3E%3Ccircle cx='50' cy='50' r='30' fill='%23f06ba8'/%3E%3C/svg%3E">
+<style>
+:root{
+  --color-parchment:#e5e4e0;
+  --color-ink:#1d1d1d;
+  --color-paper:#ffffff;
+  --color-ash:#bfbebe;
+  --color-stone:#cdcdc9;
+  --gradient-iridescent-sphere:linear-gradient(255deg, rgb(250,203,14), rgb(240,107,168) 30%, rgb(120,186,230) 65%, rgb(255,255,255));
+
+  --font-display:'Ataero Retina OB Edition','Inter',ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+
+  --text-caption:11px;   --leading-caption:1.4; --tracking-caption:0.55px;
+  --text-body-sm:15px;   --leading-body-sm:1.4; --tracking-body-sm:0.15px;
+  --text-body:18px;      --leading-body:1.4;    --tracking-body:0.23px;
+  --text-subheading:34px;--leading-subheading:1;--tracking-subheading:0.44px;
+  --text-heading-sm:46px;--leading-heading-sm:1;--tracking-heading-sm:0.6px;
+
+  --spacing-5:5px;  --spacing-6:6px;  --spacing-8:8px;  --spacing-15:15px;
+  --spacing-19:19px;--spacing-30:30px;--spacing-32:32px;--spacing-46:46px;
+  --spacing-76:76px;--spacing-119:119px;
+
+  --page-max-width:1400px;
+  --radius-cards:0px;
+  --radius-links:10px;
+}
+
+*{box-sizing:border-box;}
+html{-webkit-text-size-adjust:100%;}
+body{
+  margin:0;
+  background:var(--color-parchment);
+  color:var(--color-ink);
+  font-family:var(--font-display);
+  font-weight:400;
+  font-size:var(--text-body);
+  line-height:var(--leading-body);
+  letter-spacing:var(--tracking-body);
+  -webkit-font-smoothing:antialiased;
+}
+::selection{background:var(--color-ink);color:var(--color-parchment);}
+
+.wrap{width:100%;max-width:var(--page-max-width);margin:0 auto;padding:0 var(--spacing-30);}
+
+.label{
+  font-size:var(--text-caption);
+  line-height:var(--leading-caption);
+  letter-spacing:0.05em;
+  text-transform:uppercase;
+  margin:0;
+}
+
+/* ---------- HERO ---------- */
+.hero{
+  position:relative;
+  min-height:100vh;
+  min-height:100svh;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  padding-top:var(--spacing-30);
+  padding-bottom:var(--spacing-30);
+  overflow:hidden;
+}
+.hero__top{position:relative;z-index:2;display:flex;justify-content:space-between;gap:var(--spacing-19);}
+.hero__mid{position:relative;z-index:2;padding:var(--spacing-76) 0;}
+.hero__bottom{position:relative;z-index:2;display:flex;justify-content:space-between;align-items:flex-end;gap:var(--spacing-19);}
+
+.sphere{
+  position:absolute;
+  z-index:0;
+  top:52%;
+  left:74%;
+  width:min(600px,62vw);
+  aspect-ratio:1;
+  transform:translate(-50%,-50%);
+  border-radius:50%;
+  background:var(--gradient-iridescent-sphere);
+  pointer-events:none;
+}
+.rings{
+  position:absolute;
+  z-index:0;
+  top:52%;
+  left:74%;
+  width:min(600px,62vw);
+  aspect-ratio:1;
+  transform:translate(-50%,-50%);
+  pointer-events:none;
+}
+.rings span{
+  position:absolute;
+  top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  border:1px solid var(--color-ash);
+  border-radius:50%;
+}
+.rings span:nth-child(1){width:130%;height:130%;}
+.rings span:nth-child(2){width:170%;height:170%;}
+.rings span:nth-child(3){width:215%;height:215%;}
+
+.display{
+  font-size:clamp(46px,10.5vw,103px);
+  line-height:0.8;
+  letter-spacing:0.013em;
+  font-weight:400;
+  text-transform:uppercase;
+  margin:0;
+  max-width:14ch;
+}
+.hero__note{
+  font-size:var(--text-body-sm);
+  line-height:var(--leading-body-sm);
+  letter-spacing:var(--tracking-body-sm);
+  max-width:38ch;
+  margin:var(--spacing-30) 0 0;
+}
+.scroll-indicator{
+  font-size:var(--text-caption);
+  letter-spacing:0.05em;
+  text-transform:uppercase;
+}
+
+/* ---------- PROGRESS ---------- */
+.progress{padding:var(--spacing-76) 0;}
+.progress__head{
+  display:flex;
+  justify-content:space-between;
+  align-items:baseline;
+  gap:var(--spacing-19);
+  flex-wrap:wrap;
+}
+.progress__count{
+  font-size:var(--text-heading-sm);
+  line-height:var(--leading-heading-sm);
+  letter-spacing:var(--tracking-heading-sm);
+  margin:var(--spacing-19) 0 0;
+  font-variant-numeric:tabular-nums;
+}
+.meter{
+  margin-top:var(--spacing-30);
+  height:1px;
+  background:var(--color-ash);
+  position:relative;
+}
+.meter__fill{
+  position:absolute;
+  inset:0 auto 0 0;
+  width:0%;
+  background:var(--color-ink);
+  transition:width 220ms linear;
+}
+
+/* ---------- TRACKS ---------- */
+.track{padding-bottom:var(--spacing-76);}
+.track__head{
+  display:flex;
+  justify-content:space-between;
+  align-items:baseline;
+  gap:var(--spacing-19);
+  padding-bottom:var(--spacing-19);
+  border-bottom:1px solid var(--color-ash);
+}
+.track__title{
+  font-size:var(--text-subheading);
+  line-height:var(--leading-subheading);
+  letter-spacing:var(--tracking-subheading);
+  font-weight:400;
+  text-transform:uppercase;
+  margin:0;
+}
+.track__meta{
+  font-size:var(--text-caption);
+  letter-spacing:0.05em;
+  text-transform:uppercase;
+  font-variant-numeric:tabular-nums;
+  white-space:nowrap;
+}
+
+.items{list-style:none;margin:0;padding:0;}
+.item{border-bottom:1px solid var(--color-ash);}
+.item__btn{
+  width:100%;
+  display:grid;
+  grid-template-columns:var(--spacing-46) 30px 1fr;
+  align-items:start;
+  gap:var(--spacing-19);
+  background:none;
+  border:0;
+  border-radius:var(--radius-links);
+  padding:var(--spacing-30) var(--spacing-8);
+  margin:0;
+  text-align:left;
+  color:inherit;
+  font:inherit;
+  cursor:pointer;
+}
+.item__btn:focus-visible{outline:1px solid var(--color-ink);outline-offset:2px;}
+.item__num{
+  font-size:var(--text-caption);
+  letter-spacing:0.05em;
+  font-variant-numeric:tabular-nums;
+  padding-top:8px;
+}
+.box{
+  width:30px;height:30px;
+  border:1px solid var(--color-ink);
+  border-radius:var(--radius-links);
+  margin-top:2px;
+  position:relative;
+  flex:none;
+}
+.box::after{
+  content:"";
+  position:absolute;
+  left:11px;top:6px;
+  width:6px;height:13px;
+  border:solid var(--color-parchment);
+  border-width:0 1px 1px 0;
+  transform:rotate(45deg) scale(0.6);
+  opacity:0;
+  transition:opacity 140ms linear, transform 140ms linear;
+}
+.item__text{min-width:0;max-width:62ch;}
+.item__title{
+  font-size:var(--text-body);
+  line-height:var(--leading-body);
+  letter-spacing:var(--tracking-body);
+  margin:0;
+}
+.item__note{
+  font-size:var(--text-body-sm);
+  line-height:var(--leading-body-sm);
+  letter-spacing:var(--tracking-body-sm);
+  margin:var(--spacing-6) 0 0;
+}
+.item.is-done .item__title,
+.item.is-done .item__note,
+.item.is-done .item__num{opacity:0.45;}
+.item.is-done .item__title{text-decoration:line-through;text-decoration-thickness:1px;}
+.item.is-done .box{background:var(--color-ink);}
+.item.is-done .box::after{opacity:1;transform:rotate(45deg) scale(1);}
+@media (hover:hover){
+  .item__btn:hover .box{background:var(--color-stone);}
+  .item.is-done .item__btn:hover .box{background:var(--color-ink);}
+}
+
+/* ---------- FOOTER ---------- */
+.foot{
+  padding:var(--spacing-46) 0 var(--spacing-119);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:var(--spacing-19);
+  flex-wrap:wrap;
+}
+.ghost-link{
+  font-size:var(--text-body-sm);
+  line-height:var(--leading-body-sm);
+  letter-spacing:var(--tracking-body-sm);
+  color:var(--color-ink);
+  background:none;
+  border:0;
+  border-radius:var(--radius-links);
+  padding:var(--spacing-5) 0;
+  font-family:inherit;
+  cursor:pointer;
+  text-decoration:none;
+}
+.ghost-link:hover{text-decoration:underline;}
+.ghost-link:focus-visible{outline:1px solid var(--color-ink);outline-offset:2px;}
+
+@media (max-width:720px){
+  .wrap{padding:0 var(--spacing-19);}
+  .item__btn{grid-template-columns:var(--spacing-32) 22px 1fr;gap:var(--spacing-15);padding:var(--spacing-19) 0;}
+  .progress,.track{padding-bottom:var(--spacing-46);}
+  .progress{padding-top:var(--spacing-46);}
+  .hero__mid{padding:var(--spacing-46) 0;}
+}
+@media (prefers-reduced-motion:reduce){
+  *{transition:none !important;}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="sphere" aria-hidden="true"></div>
+  <div class="rings" aria-hidden="true"><span></span><span></span><span></span></div>
+
+  <div class="wrap hero__top">
+    <p class="label">Property Transaction</p>
+    <p class="label">19 Steps</p>
+  </div>
+
+  <div class="wrap hero__mid">
+    <h1 class="display">Property Transaction Checklist</h1>
+    <p class="hero__note">Value, documents, taxes, agencies and contract — tracked in one place.</p>
+  </div>
+
+  <div class="wrap hero__bottom">
+    <p class="label">Bogotá</p>
+    <p class="scroll-indicator">Scroll ↓</p>
+  </div>
+</header>
+
+<main>
+  <section class="wrap progress" aria-label="Progress">
+    <div class="progress__head">
+      <p class="label">Progress</p>
+      <p class="label" id="progress-pct">0%</p>
+    </div>
+    <p class="progress__count"><span id="progress-done">0</span> / 19 complete</p>
+    <div class="meter" role="progressbar" aria-labelledby="progress-done" aria-valuemin="0" aria-valuemax="19" aria-valuenow="0">
+      <div class="meter__fill" id="meter-fill"></div>
+    </div>
+  </section>
+
+  <div class="wrap" id="tracks"></div>
+
+  <div class="wrap foot">
+    <p class="label">End of checklist</p>
+    <button type="button" class="ghost-link" id="reset">Reset all →</button>
+  </div>
+</main>
+
+<script>
+const TRACKS = [
+  {
+    id:"a", label:"Track A", title:"Value",
+    items:[
+      {n:1, title:"Message RAA appraisers for an avalúo comercial quote"},
+      {n:2, title:"Look up the property on Catastro Bogotá using the CHIP"},
+      {n:3, title:"Read the market reference section", note:"For context, not for pricing."}
+    ]
+  },
+  {
+    id:"b", label:"Track B", title:"Documents",
+    items:[
+      {n:4, title:"Chat IDU to start the paz y salvo de valorización", note:"Slowest one — start today."},
+      {n:5, title:"Send letter to Notaría 64 for a copy of deed 2043/2005"},
+      {n:6, title:"Send letter to Notaría 19 for the condominium bylaws"},
+      {n:7, title:"Email the San Luis building administrator", note:"Areas, paz y salvo, admin's authority."},
+      {n:8, title:"Send letter to Alcaldía de Engativá for the building's legal-rep certificate"},
+      {n:9, title:"Apply online with Secretaría de Hacienda for the predial paz y salvo"},
+      {n:10, title:"Check deed 2043 for the owner's 2005 marital status", note:"Once it arrives."},
+      {n:11, title:"Get a special power of attorney notarized", note:"Only if the owner won't sign in person."},
+      {n:12, title:"Request a fresh certificado de tradición", note:"Do this last, right before signing."}
+    ]
+  },
+  {
+    id:"c", label:"Track C", title:"Taxes",
+    items:[
+      {n:13, title:"Book an appointment with the accountant"},
+      {n:14, title:"Ask the accountant the eight questions", note:"At that appointment."}
+    ]
+  },
+  {
+    id:"d", label:"Section", title:"Estate Agencies",
+    items:[
+      {n:15, title:"Verify each agency's papers", note:"Cámara de Comercio cert, matrícula mercantil, etc."},
+      {n:16, title:"Ask each agency the eight scorecard questions"},
+      {n:17, title:"Compare the agencies' quotes and flag any outlier"}
+    ]
+  },
+  {
+    id:"e", label:"Section", title:"Contract",
+    items:[
+      {n:18, title:"Check the brokerage contract for the eight non-negotiable clauses"},
+      {n:19, title:"Send the promesa de compraventa to a real-estate lawyer for review"}
+    ]
+  }
+];
+
+const STORAGE_KEY = "quickchecklist.v1";
+const TOTAL = TRACKS.reduce((sum, t) => sum + t.items.length, 0);
+
+function loadState(){
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    return raw ? JSON.parse(raw) : {};
+  } catch (e) {
+    return {};
+  }
+}
+function saveState(state){
+  try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); } catch (e) {}
+}
+
+let state = loadState();
+
+const tracksEl = document.getElementById("tracks");
+
+TRACKS.forEach(track => {
+  const section = document.createElement("section");
+  section.className = "track";
+
+  const head = document.createElement("div");
+  head.className = "track__head";
+  const label = document.createElement("p");
+  label.className = "label";
+  label.textContent = track.label;
+  const title = document.createElement("h2");
+  title.className = "track__title";
+  title.textContent = track.title;
+  const meta = document.createElement("p");
+  meta.className = "track__meta";
+  meta.dataset.trackMeta = track.id;
+
+  const headLeft = document.createElement("div");
+  headLeft.appendChild(label);
+  headLeft.appendChild(title);
+  head.appendChild(headLeft);
+  head.appendChild(meta);
+
+  const list = document.createElement("ul");
+  list.className = "items";
+
+  track.items.forEach(item => {
+    const key = "i" + item.n;
+    const li = document.createElement("li");
+    li.className = "item";
+    li.dataset.track = track.id;
+    li.dataset.key = key;
+
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "item__btn";
+    btn.setAttribute("aria-pressed", "false");
+
+    const num = document.createElement("span");
+    num.className = "item__num";
+    num.textContent = String(item.n).padStart(2, "0");
+
+    const box = document.createElement("span");
+    box.className = "box";
+    box.setAttribute("aria-hidden", "true");
+
+    const text = document.createElement("span");
+    text.className = "item__text";
+    const t = document.createElement("span");
+    t.className = "item__title";
+    t.textContent = item.title;
+    text.appendChild(t);
+    if (item.note){
+      const note = document.createElement("span");
+      note.className = "item__note";
+      note.textContent = item.note;
+      note.style.display = "block";
+      text.appendChild(note);
+    }
+
+    btn.appendChild(num);
+    btn.appendChild(box);
+    btn.appendChild(text);
+    li.appendChild(btn);
+    list.appendChild(li);
+
+    btn.addEventListener("click", () => {
+      state[key] = !state[key];
+      saveState(state);
+      render();
+    });
+  });
+
+  section.appendChild(head);
+  section.appendChild(list);
+  tracksEl.appendChild(section);
+});
+
+function render(){
+  let done = 0;
+  TRACKS.forEach(track => {
+    let trackDone = 0;
+    track.items.forEach(item => {
+      const key = "i" + item.n;
+      const li = tracksEl.querySelector('[data-key="' + key + '"]');
+      const checked = !!state[key];
+      li.classList.toggle("is-done", checked);
+      li.querySelector(".item__btn").setAttribute("aria-pressed", String(checked));
+      if (checked){ trackDone++; done++; }
+    });
+    tracksEl.querySelector('[data-track-meta="' + track.id + '"]').textContent =
+      trackDone + " / " + track.items.length;
+  });
+
+  const pct = Math.round((done / TOTAL) * 100);
+  document.getElementById("progress-done").textContent = done;
+  document.getElementById("progress-pct").textContent = pct + "%";
+  document.getElementById("meter-fill").style.width = pct + "%";
+  document.querySelector(".meter").setAttribute("aria-valuenow", String(done));
+}
+
+document.getElementById("reset").addEventListener("click", () => {
+  state = {};
+  saveState(state);
+  render();
+});
+
+render();
+</script>
+
+</body>
+</html>
